@@ -1,0 +1,21 @@
+.main-img img{
+    width: 100%;
+}
+
+.main-display{
+  border: 1px solid black;
+  padding: 12px;
+  margin: 12px;
+  border-radius: 12px;
+
+}
+
+@media(max-width:600px){
+
+.main-display{
+  padding: 20px ;
+  margin: 30px ;
+}
+
+
+}

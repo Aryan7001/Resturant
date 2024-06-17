@@ -1,0 +1,6 @@
+.main-single{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 12px;
+}
