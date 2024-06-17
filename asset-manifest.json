@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Resturant.gitd/static/css/main.ea917960.css",
+    "main.js": "/Resturant.gitd/static/js/main.d11d41f1.js",
+    "static/media/Aryan.jpg": "/Resturant.gitd/static/media/Aryan.3d8350dbedc69197b73a.jpg",
+    "static/media/chief.jpg": "/Resturant.gitd/static/media/chief.04bee1178ada80e01721.jpg",
+    "static/media/pizza.jpg": "/Resturant.gitd/static/media/pizza.9dc1a24ea4d2f0d45953.jpg",
+    "static/media/image1.png": "/Resturant.gitd/static/media/image1.d34355d42bd51d8be28b.png",
+    "static/media/image2.png": "/Resturant.gitd/static/media/image2.e327f35ee0d0a480632f.png",
+    "static/media/card.jpg": "/Resturant.gitd/static/media/card.90f18f6d00c79b6bb13d.jpg",
+    "static/media/Logo.png": "/Resturant.gitd/static/media/Logo.be73e9aa050f05bdf8b0.png",
+    "static/media/instagram.png": "/Resturant.gitd/static/media/instagram.e719d8b29f452a16302d.png",
+    "static/media/linkedin.png": "/Resturant.gitd/static/media/linkedin.17e919bb623c20be8b80.png",
+    "static/media/facebook.png": "/Resturant.gitd/static/media/facebook.49e67d43221b6bb1aa86.png",
+    "static/media/play.png": "/Resturant.gitd/static/media/play.f902960a94878ee0da67.png",
+    "index.html": "/Resturant.gitd/index.html",
+    "main.ea917960.css.map": "/Resturant.gitd/static/css/main.ea917960.css.map",
+    "main.d11d41f1.js.map": "/Resturant.gitd/static/js/main.d11d41f1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ea917960.css",
+    "static/js/main.d11d41f1.js"
+  ]
+}
