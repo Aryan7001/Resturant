@@ -2,7 +2,6 @@ import React from 'react'
 import './Footer.css'
 import { icons } from '../Images/assets'
 
-
 const Footer = () => {
   return (
     <div className='footer-main'>

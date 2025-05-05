@@ -1,51 +1,86 @@
-.main-form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 16vh 0;
-    color: whitesmoke;
-    font-size: 30px;
-    font-weight: 300;
-}
-
-.main-form input{
-    font-size: 24px;
-    border-radius: 12px;
-}
-
-.main-form button{
-    padding: 12px;
-    border-radius: 12px;
-    color: red;
-    background-color: black;
-    font-weight: 500;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.main-contact{
-    border: 1px solid black;
+.main-contact {
     width: 100%;
-    height: 450px;
+    min-height: 100vh;
     background-image: url('../../Images/pizza.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-}
-
-@media(max-width:600px){
-
-    .main-contact{
-        width: 100%;
-        height: 450px;
-        padding: 12px;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+  }
+  
+  .main-form {
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 12px;
+    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .main-form label {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    gap: 8px;
+  }
+  
+ .main-form input,
+  .main-form textarea {
+    font-size: 16px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background-color: #f3f3f3;
+    color: #000;
+  }
+  
+  .main-form textarea {
+    resize: none;
+    height: 120px;
+  }
+  
+  .main-form button {
+    padding: 12px;
+    border-radius: 8px;
+    color: #fff;
+    background-color: #e63946;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s ease;
+  }
+  
+  .main-form button:hover {
+    background-color: #c72837;
+  }
+  
+  @media (max-width: 600px) {
+    .main-form {
+      padding: 20px;
+      gap: 16px;
     }
-
-    .main-form input{
-        font-size: 18px;
+  
+    .main-form label {
+      font-size: 14px;
     }
-
-
-}
+  
+    .main-form input,
+    .main-form textarea {
+      font-size: 14px;
+    }
+  
+    .main-form button {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
+  

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './Contact us.css'
+import './Contact us.css'; 
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -14,10 +14,7 @@ const ContactUs = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prevValue) => ({
-      ...prevValue,
-      [name]: value
-    }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async (e) => {
@@ -28,12 +25,17 @@ const ContactUs = () => {
         access_key: API_KEY,
         name: formData.Name,
         email: formData.Email,
-        message: formData.Message
+        message: formData.Message,
       });
-      console.log(res.data); 
-      alert('Your message was sent successfully')
+
+      alert('Your message was sent successfully!');
+      console.log(res.data);
+
+      // Optional: Reset form after submission
+      setFormData({ Name: '', Email: '', Message: '' });
     } catch (error) {
-      console.log(error); 
+      alert('Something went wrong. Please try again.');
+      console.error(error);
     }
   };
 
@@ -44,9 +46,10 @@ const ContactUs = () => {
           Name:
           <input
             type="text"
+            name="Name"
             value={formData.Name}
             onChange={handleChange}
-            name='Name'
+            placeholder="Enter your name"
             required
           />
         </label>
@@ -55,9 +58,10 @@ const ContactUs = () => {
           Email:
           <input
             type="email"
+            name="Email"
             value={formData.Email}
             onChange={handleChange}
-            name='Email'
+            placeholder="Enter your email"
             required
           />
         </label>
@@ -65,14 +69,16 @@ const ContactUs = () => {
         <label>
           Message:
           <textarea
+            name="Message"
             value={formData.Message}
             onChange={handleChange}
-            name='Message'
+            placeholder="Write your message"
+            rows="5"
             required
           />
         </label>
 
-        <button type='submit'>Contact Us</button> 
+        <button type="submit">Send Message</button>
       </form>
     </div>
   );

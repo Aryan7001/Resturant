@@ -1,14 +1,15 @@
 {
   "name": "drinks",
+  "homepage": "https://Aryan7001.github.io/Resturant",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Aryan7001.github.io/Resturant",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "emailjs-com": "^3.2.0",
     "firebase": "^10.12.2",
+    "framer-motion": "^12.9.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-firebase-hooks": "^5.1.1",
@@ -20,8 +21,8 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "start":"react-scripts start",
-    "build":"react-scripts build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

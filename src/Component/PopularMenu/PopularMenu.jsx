@@ -8,7 +8,7 @@ const PopularMenu = () => {
 const{products,loading} = useContext(StoreContext)
 console.log('dami', products)
 
-if(!loading){
+if(loading){
 <p>loading.....</p>
 
 }

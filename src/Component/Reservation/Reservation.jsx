@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './Reservation.css';
 import axios from 'axios';
 
-
 const Reservation = () => {
   const API_KEY = '0768d61e-16d0-4ab2-81f4-cee3bb86bfb9';
   const URL = 'https://api.web3forms.com/submit';
@@ -10,7 +9,7 @@ const Reservation = () => {
   const [formData, setFormData] = useState({
     name: '',
     date: '',
-    gmail:'',
+    gmail: '',
     time: '',
     people: 1,
   });
@@ -23,115 +22,97 @@ const Reservation = () => {
     }));
   };
 
-  const handleSubmit = async(e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     alert(`Booking confirmed for ${formData.name} on ${formData.date} at ${formData.time} for ${formData.people} people.`);
 
-try{
-
-  const res= await axios.post(URL,{
-    apikey:API_KEY,
-    Message:'Your table is booked',
-    name:formData.name,
-    date:formData.date,
-    gmail:formData.gmail,
-    time:formData.time,
-    people:formData.people,
-
-  })
-  console.log(res.data);
-
-}
-
-catch(error){
-alert('there is an error')
-}
+    try {
+      const res = await axios.post(URL, {
+        access_key: API_KEY,
+        message: 'Your table is booked',
+        name: formData.name,
+        date: formData.date,
+        email: formData.gmail,
+        time: formData.time,
+        people: formData.people,
+      });
+      console.log(res.data);
+    } catch (error) {
+      alert('There was an error!');
+    }
 
     setFormData({
       name: '',
       date: '',
-      gmail:'',
+      gmail: '',
       time: '',
       people: 1,
     });
   };
 
-
-
-
-
   return (
-    <>  
-    <div className='main-back'>
-    <div className='title'>
-    <h1>Book your <span>table now</span></h1>
-  </div>
-    <div className='reservation-container'>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Name:
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-        </label>
-        <label>
-          Date:
-          <input
-            type="date"
-            name="date"
-            value={formData.date}
-            onChange={handleChange}
-            required
-          />
-        </label>
+    <div className='reservation-background'>
+      <div className='reservation-title'>
+        <h1>Book your <span>table now</span></h1>
+      </div>
 
-        <label>
-          Gmail:
-          <input
-            type="gmail"
-            name="gmail"
-            value={formData.gmail}
-            onChange={handleChange}
-            required
-          />
-        </label>
+      <div className='reservation-form-wrapper'>
+        <form onSubmit={handleSubmit} className='reservation-form'>
+          <label>
+            Name:
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+          </label>
 
-        <label>
-          Time:
-          <input
-            type="time"
-            name="time"
-            value={formData.time}
-            onChange={handleChange}
-            required
-          />
-        </label>
-        <label>
-          Number of People:
-          <input
-            type="number"
-            name="people"
-            value={formData.people}
-            onChange={handleChange}
-            min="1"
-            required
-          />
-        </label>
+          <label>
+            Date:
+            <input type="date" name="date" value={formData.date} onChange={handleChange} required/>
+          </label>
 
-        <button type="submit">Book a Table</button>
-      </form>
+          <label>
+            Gmail:
+            <input
+              type="email"
+              name="gmail"
+              value={formData.gmail}
+              onChange={handleChange}
+              required
+            />
+          </label>
+
+          <label>
+            Time:
+            <input
+              type="time"
+              name="time"
+              value={formData.time}
+              onChange={handleChange}
+              required
+            />
+          </label>
+
+          <label>
+            Number of People:
+            <input
+              type="number"
+              name="people"
+              value={formData.people}
+              onChange={handleChange}
+              min="1"
+              required
+            />
+          </label>
+
+          <button type="submit">Book a Table</button>
+        </form>
+      </div>
     </div>
-    </div>
-    </>
   );
 };
 
 export default Reservation;
-
-
-
-

@@ -1,70 +1,140 @@
-.nav-details img{
-    width: 100px;
+.main-nav {
+  background-color: #FFA62F;
+  padding: 5px;
+  position: relative;
 }
 
-.nav-details{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2vw;
+.nav-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2vw;
 }
 
-.nav-list{
-    display: flex;
-    gap: 20px;
-list-style: none;
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
-.nav-list li{
-    font-family:'Times New Roman', Times, serif;
-    font-size: 18px;
-    font-weight: 400;
-    color: #240750;
+.nav-details img {
+  width: 100px;
 }
 
-.nav-list li:hover{
-    color: #FFFAE6;
+.nav-list {
+  display: flex;
+  gap: 20px;
+  list-style: none;
 }
 
-.link-nav{
-    text-decoration: none;
-    
+.nav-list li {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #240750;
 }
 
-.nav-icons{
-    display: flex;
-    gap: 12px;
+.nav-list li:hover {
+  color: #FFFAE6;
 }
 
-.main-nav{
-    background-color: #FFA62F;
-    padding: 5px;
-    
+.link-nav {
+  text-decoration: none;
 }
 
-@media(max-width:600px){
-
-
-.nav-list li{
-    font-size:10px;
-    font-weight: 400;
-    color: #240750;
+.nav-icons {
+  display: flex;
+  gap: 12px;
+  cursor: pointer;
 }
 
-.nav-details img{
+.material-symbols-outlined {
+  font-size: 28px;
+  color: #240750;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.sidebar-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 220px;
+  background-color: #FFFAE6;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 1000;
+}
+
+.sidebar-menu li {
+  list-style: none;
+  color: #240750;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+  .nav-left {
+    gap: 10px;
+  }
+
+  .nav-list {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .nav-list li {
+    font-size: 16px;
+  }
+
+  .nav-details img {
     width: 60px;
+  }
+
+  .nav-icons span {
+    font-size: 24px;
+  }
+
+  .nav-details {
+    padding: 0 1.5vw;
+  }
+
+  .sidebar-menu {
+    padding: 60px 20px;
+    width: 70%;
+  }
 }
 
-.nav-list{
-    display: flex;
-    gap:12px;
-    padding-left: 8px;
-    align-items: center;
-}
+@media (max-width: 480px) {
+  .nav-list li {
+    font-size: 14px;
+  }
 
-.main-nav{
-width:100%;
-padding:6px 12px ;
-}
+  .material-symbols-outlined {
+    font-size: 24px;
+  }
 
+  .nav-icons span {
+    font-size: 22px;
+  }
+
+  .nav-details img {
+    width: 50px;
+  }
 }

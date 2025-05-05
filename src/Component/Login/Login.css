@@ -1,65 +1,150 @@
-.login p{
-    font-size: 16px;
-    cursor: pointer;
-    color: black;
+.login {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #00000090;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  padding: 1rem;
+  color: white;
 }
 
-.login{
-    width: 100%;
-    z-index: 1;
-    position: absolute;
-    height: 100%;
-    background-color: #00000090;
-    color: white;
-   display: flex;
-
+.login-items {
+  width: 90%;
+  max-width: 400px;
+  background: #f1ba88;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 95vh;
+  overflow-y: auto;
 }
 
-.login-items{
-    display: flex;
+/* Heading styling */
+.login-heading {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.login-heading h1 {
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  margin: 0;
+  color: #000;
+}
+
+.login-heading p {
+  font-size: clamp(1.25rem, 4vw, 1.5rem);
+  margin: 0;
+  cursor: pointer;
+  color: red;
+}
+
+/* Input fields styling */
+.details {
+  width: 100%;
+}
+
+.details input {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.75rem 0;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: clamp(0.875rem, 3vw, 1rem);
+  color: #000;
+}
+
+/* Login button styling */
+.login-buttons button {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 10px;
+  background-color: tomato;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: clamp(0.875rem, 3vw, 1rem);
+  margin: 1.5rem 0;
+  min-height: 44px;
+  transition: background 0.3s ease;
+}
+
+.login-buttons button:hover {
+  background-color: #e25b3e;
+}
+
+/* Checkbox and text */
+.login-condition {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: clamp(0.75rem, 2.5vw, 0.875rem);
+  color: black;
+  margin-bottom: 1rem;
+}
+
+.login-condition input {
+  accent-color: tomato;
+  min-width: 18px;
+  min-height: 18px;
+}
+
+/* Links text */
+.login-items p {
+  font-size: clamp(0.75rem, 2.5vw, 0.875rem);
+  text-align: center;
+  color: black;
+  margin: 0.5rem 0;
+}
+
+.login-items span {
+  color: black;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .login-items {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-items {
+    width: 65%;
+    padding: 1rem;
+  }
+
+  .login-heading {
+    margin-bottom: 1rem;
+  }
+
+  .details input {
+    padding: 0.2rem;
+    margin: 0.5rem 0;
+  }
+
+  .login-buttons button {
+    margin: 1rem 0;
+    padding: 0.6rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .login-condition {
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: #0A6847;
-    padding: 7vh 12px;
-    margin: 15vh 38vw;
-    width: 25%;
-    border-radius: 12px;
-}
-
-.details input{
-    display: flex;
-    z-index: 1;
-    padding: 1vh 4vw;
-    margin: 2vh ;
-    border-radius: 12px;
-    border: none;
-    outline: none;
-}
-
-.login-heading{
-    display: flex;
-    align-items: center;
-    gap: 10vw;
-    justify-content: center;
-
-}
-
-.login-condition{
-    display: flex;
-    gap: 12px;
-}
-
-.login-items span{
-    color: black;
-    cursor: pointer;
-}
-
-.login-items button{
-    padding: 1vh 8vw;
-    border-radius: 12px;
-    margin: 3vh 3vw;
-    background-color: tomato;
-    color: white;
-    cursor: pointer;
+    align-items: flex-start;
+  }
 }

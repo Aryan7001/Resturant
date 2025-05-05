@@ -1,101 +1,184 @@
-.alert{
-    margin: 0 5vw;
-    border-radius: 12px;
-    background-color: skyblue;
-    padding: 1vw 25vw;
+.main-back {
+  background-image: url('.././Images/pizza.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 40px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.title{
-    padding: 0 40vw;
+.title {
+  text-align: center;
+  margin-bottom: 24px;
 }
 
-.title h1{
-    font-weight: 500;
-    color: white;
+.title h1 {
+  font-size: 32px;
+  font-weight: 600;
+  color: white;
+}
+
+.title span {
+  color: red;
+}
+
+.reservation-container {
+  width: 100%;
+  max-width: 500px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.reservation-container label {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.reservation-container input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  margin-top: 6px;
+}
+
+.reservation-container button {
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.reservation-container button:hover {
+  background-color: black;
+  color: red;
+}
+
+@media (max-width: 600px) {
+  .main-back {
+    padding: 24px 12px;
+  }
+
+  .title h1 {
     font-size: 24px;
+  }
+
+  .reservation-container {
+    padding: 24px 16px;
+  }
+
+  .reservation-container input,
+  .reservation-container button {
+    font-size: 14px;
+  }
+}
+.reservation-background {
+  background-image: url('../Images/pizza.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 60px 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.title span{
-color: red;
+.reservation-title {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
-.reservation-container label{
-display: flex;
-padding: 15px;
-margin: 12px;
-gap: 12px;
+.reservation-title h1 {
+  color: white;
+  font-size: 32px;
+  font-weight: 600;
 }
 
-.reservation-container{
-display: flex;
-justify-content: center;
-align-items: center;
-border: 6px solid white;
-color: white;
-font-weight: 700;
-width: 30%;
-height: 500px;
-margin: 12px 35vw;
-border-radius: 12px;
-justify-content: center;
+.reservation-title span {
+  color: red;
 }
 
-.reservation-container input{
+.reservation-form-wrapper {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 16px;
+  padding: 30px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.reservation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.reservation-form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  gap: 8px;
+}
+
+.reservation-form input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+.reservation-form button {
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+  margin-top: 12px;
+}
+
+.reservation-form button:hover {
+  background-color: black;
+  color: red;
+}
+  .reservation-title h1 {
+    font-size: 24px;
+  }
+
+  .reservation-form-wrapper {
+    padding: 20px;
+  }
+
+  .reservation-form input {
+    font-size: 14px;
+  }
+
+  .reservation-form button {
+    font-size: 14px;
     padding: 10px;
-    border-radius: 10px;
-}
+  }
 
-.reservation-container button{
-    padding: 12px;
-    border-radius: 12px;
-    margin: 0 8vw;
-    cursor: pointer;
-}
-
-.reservation-container button:hover{
-    color: red;
-    background-color: black;
-}
-
-.main-back{
-    background-image: url('.././Images/pizza.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100vh;
-    padding: 12px 0;
-}
-
-
-@media(max-width:600px){
-
-    .reservation-container{
-        width: 100%;
-        position: relative;
-        right: 8vw;
-        height: 60%;
-        padding: 5px;
-        margin: 18px;
-    }
-
-    .reservation-container label{
-        padding: 12px;
-        margin: 16px;
-    }
-
-
-    .title{
-        padding: 0 18vw;
-    }
-
-.title span{
-    color: red;
-}
-  
-.main-back{
-    padding: 12px;
-
-}
-
-
-}

@@ -1,90 +1,153 @@
-.main-heading{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    background-color: #F1EFEF;
-}
-
-.left-headings{
-    position: absolute;
-    left: 12vw;
-}
-.left-headings h1{
-    font-size: 50px;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: 500;
- 
-}
-
-.left-headings span{
-    color: red;
-}
-
-.left-headings p{
-    font-size: 20px;
-    font-weight: 300;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-.right-heading{
-    position: relative;
-    left: 50vw;
-}
-
-.right-heading img{
-    width: 650px;
-}
-
-.left-button button{
-    padding: 1vw;
-    margin: 1vh;
-    color: white;
-    background-color: red;
-    border: none;
-    cursor: pointer;
-    box-shadow: 8px 8px 8px brown;
-}
-
-.left-button button:hover{
-background-color: white;
-color: red;
-
+.main-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F1EFEF;
+  padding: 40px 60px;
+  flex-wrap: wrap;
 }
 
 
-@media(max-width:600px){
-    .right-heading img{
-        width: 200px;
-       
-    }
+.right-heading {
+  order: 1; 
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
 
-.left-headings{
-    position: absolute;
-    top: 10px;
-    left: 30px;
+.right-heading img {
+  width: 100%; 
+  max-width: 600px;
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
 }
 
 
+.left-headings {
+  order: 2; 
+  flex: 1;
+  padding: 20px;
+  max-width: 600px;
+}
 
-    .left-headings h1{
-        font-size: 22px;
-        font-weight: 500;
-    }
+.left-headings h1 {
+  font-size: 48px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
 
-    .main-heading{
-        padding: 35px 12px;
-        width: 100%;
+.left-headings span {
+  color: red;
+}
 
-    }
+.left-headings p {
+  font-size: 20px;
+  font-weight: 300;
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 20px;
+}
 
-    .left-headings p{
-        font-size: 12px;
-    }
+.left-button {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
 
+.left-button button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: red;
+  border: none;
+  cursor: pointer;
+  box-shadow: 8px 8px 8px brown;
+  transition: all 0.3s ease;
+}
 
+.left-button button:hover {
+  background-color: white;
+  color: red;
+  transform: scale(1.05);
+  box-shadow: 8px 8px 15px brown; 
+}
 
+@media (max-width: 1024px) {
+  .main-heading {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 40px;
+  }
 
+  .right-heading {
+    order: 1;
+  }
 
+  .left-headings {
+    order: 2;
+  }
 
+  .left-headings h1 {
+    font-size: 36px;
+  }
+
+  .left-headings p {
+    font-size: 18px;
+  }
+
+  .right-heading img {
+    width: 400px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-heading {
+    padding: 20px 15px;
+  }
+
+  .left-headings {
+    padding: 0;
+  }
+
+  .left-headings h1 {
+    font-size: 26px;
+  }
+
+  .left-headings p {
+    font-size: 14px;
+  }
+
+  .left-button {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .left-button button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .right-heading img {
+    width: 250px;
+  }
+}
+
+@media (max-width: 400px) {
+  .left-headings h1 {
+    font-size: 22px;
+  }
+
+  .left-headings p {
+    font-size: 12px;
+  }
+
+  .left-button button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .right-heading img {
+    width: 180px;
+  }
 }

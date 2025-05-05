@@ -1,67 +1,97 @@
 .icons img {
     width: 40px;
     margin-right: 12px;
-}
-
-.footer-main{
+  }
+  
+  .footer-main {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
     padding: 7vh 8vw;
     margin: 2vh 3vw;
     background-color: #FFF2D7;
-    align-items: center;
-}
-
-.footer-4 img{
+    align-items: flex-start;
+  }
+  
+  .footer-main h3,
+  .footer-main h4 {
+    color: #00215E;
+  }
+  
+  .footer-main p {
+    color: #524C42;
+  }
+  
+  .footer-4 img {
     width: 10vw;
-}
-
-.footer-icons{
+  }
+  
+  .footer-icons {
     display: flex;
     gap: 12px;
-}
-
-.footer-main p{
-color: #524C42;
-}
-
-.footer-main h3,h4{
-    color: #00215E;
-}
-
-.logo-img img{
-     width: 90px;
-}
-
-
-@media(max-width:600px){
-
-    .logo-img img{
-        width: 40px;
-   }
-   
-   .icons img {
-    width: 15px;
-}
-
-.footer-4 img{
-    width: 13vw;
-}
-
-.footer-main h3,h4{
-    color: #00215E;
-    font-size: 12px;
-}
-
-.footer-main p{
-    color: #524C42;
-    font-size: 12px;
+    flex-wrap: wrap;
+  }
+  
+  .logo-img img {
+    width: 90px;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-main {
+      grid-template-columns: 1fr 1fr;
+      padding: 4vh 5vw;
+      margin: 2vh 2vw;
+      gap: 24px;
     }
-    
-    .footer-main{
-        padding: 2vh 2vw;
-        margin: 1vh 1vw;
-        background-color: #FFF2D7;
+  
+    .footer-4 img {
+      width: 20vw;
     }
-
-}
+  
+    .logo-img img {
+      width: 60px;
+    }
+  
+    .icons img {
+      width: 20px;
+    }
+  
+    .footer-main h3,
+    .footer-main h4 {
+      font-size: 14px;
+    }
+  
+    .footer-main p {
+      font-size: 13px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer-main {
+      grid-template-columns: 1fr;
+      padding: 3vh 4vw;
+      margin: 1vh 1vw;
+    }
+  
+    .footer-4 img {
+      width: 28vw;
+    }
+  
+    .logo-img img {
+      width: 50px;
+    }
+  
+    .icons img {
+      width: 18px;
+    }
+  
+    .footer-main h3,
+    .footer-main h4 {
+      font-size: 13px;
+    }
+  
+    .footer-main p {
+      font-size: 12px;
+    }
+  }
+  

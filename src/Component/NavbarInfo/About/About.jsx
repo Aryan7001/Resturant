@@ -5,35 +5,47 @@ import './About.css'
 const About = () => {
   return (
     <div className='main-about'>
-      <div className="main">
-        <div className="first">
-            <div className='img-main'>
-            <img src={icons.chief} alt="" />
-            </div>
-            <div className='text-main'>
-            <h3>About <br/> <span>Our Resturant </span></h3>
-            <p>this is one of the finest resturant u will ever find in this entire city. <br /> We have the best cuisines in the world and also bets cheif </p>
-            </div>
+      <div className='main'>
+        <div className='section'>
+          <div className='img-container green-shadow'>
+            <img src={icons.chief} alt="Our Chef" />
+          </div>
+          <div className='text-container'>
+            <h3>About <br /><span>Our Restaurant</span></h3>
+            <p>
+              This is one of the finest restaurants you'll ever find in this entire city. <br />
+              We have the best cuisines in the world and the most talented chefs.
+            </p>
+          </div>
         </div>
-        <div className="second">
-            <div className='text-main1'>
-            <h3>About <br/> <span>Our Resturant </span></h3>
-            <p>this is one of the finest resturant u will ever find in this entire city. <br /> We have the best cuisines in the world and also bets cheif </p>
-            </div>
-            <div className='img-main1'>
-            <img src={icons.chief} alt="" />
-            </div>
+
+        <div className='section reverse'>
+        <div className='img-container purple-shadow'>
+            <img src={icons.chief} alt="Our Chef" />
+          </div>
+          <div className='text-container'>
+            <h3>About <br /><span>Our Restaurant</span></h3>
+            <p>
+              We take pride in offering a wide variety of global cuisines that delight every palate. <br />
+              Come and experience the best flavors crafted by our expert chefs.
+            </p>
+          </div>
         </div>
-        <div className="third">
-        <div className='img-main2'>
-            <img src={icons.Aryan} alt="" />
-            </div>
-            <div className='text-main2'>
+
+        <div className='section'>
+          <div className='img-container yellow-shadow'>
+            <img src={icons.Aryan} alt="Owner - Aryan Thapa" />
+          </div>
+          <div className='text-container'>
             <h3>Owner</h3>
-        <h4>Aryan Thapa</h4>
-        <p>Hello, I am the owner of this resturant. Here we provide u the varities of dishes with  unique taste and not only this we are only the resturant in the town where u will find every dishes of every country.</p>
-            </div>
+            <h4>Aryan Thapa</h4>
+            <p>
+              Hello, I am the owner of this restaurant. We offer a wide variety of dishes with unique flavors.
+              We are proud to be the only restaurant in town serving cuisines from all around the world.
+            </p>
+          </div>
         </div>
+
       </div>
     </div>
   )
